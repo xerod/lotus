@@ -16,7 +16,7 @@
         ref="input"
         type="search"
         :value="query"
-        class="block w-full py-2 pl-10 pr-4 border-2 rounded-lg bg-ui-sidebar border-ui-sidebar focus:bg-ui-background"
+        class="block w-full py-2 pl-10 pr-4 border-2 rounded-lg bg-ui-sidebar border-ui-sidebar outline-none focus:bg-ui-background"
         :class="{ 'rounded-b-none': showResult }"
         placeholder="Search Documentation..."
         @focus="focused = true"
@@ -45,7 +45,7 @@
           :key="result.path + result.anchor"
           @mouseenter="focusIndex = index"
           @mousedown="go"
-          class="border-ui-sidebar"
+          class="border-ui-sidebar mx-2"
           :class="{
             'border-b': index + 1 !== results.length
           }"
@@ -54,7 +54,7 @@
             :to="result.path + result.anchor"
             class="block p-2 -mx-2 text-base font-bold rounded-lg"
             :class="{
-              'bg-ui-sidebar text-ui-primary': focusIndex === index
+              'bg-ui-sidebar': focusIndex === index
             }"
           >
             <span v-if="result.value === result.title">
