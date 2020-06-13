@@ -131,7 +131,7 @@ export default {
   --color-ui-typo: theme("colors.gray.700");
   --color-ui-sidebar: theme("colors.gray.200");
   --color-ui-border: theme("colors.gray.300");
-  --color-ui-primary: theme("colors.eucalyptus.600");
+  --color-ui-primary: theme("colors.green.700");
 }
 
 html[lights-out] {
@@ -139,7 +139,7 @@ html[lights-out] {
   --color-ui-typo: theme("colors.gray.100");
   --color-ui-sidebar: theme("colors.gray.800");
   --color-ui-border: theme("colors.gray.800");
-  --color-ui-primary: theme("colors.eucalyptus.500");
+  --color-ui-primary: theme("colors.green.600");
 
   pre[class*="language-"],
   code[class*="language-"] {
@@ -151,6 +151,10 @@ html[lights-out] {
   transition-property: background-color, border-color;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
+}
+
+html {
+  @apply bg-ui-background;
 }
 
 h1,
