@@ -35,6 +35,10 @@ module.exports = {
             title: "Configuration",
             items: ["/docs/settings/", "/docs/sidebar/"],
           },
+          {
+            title: "Component",
+            items: ["/docs/alerts/", "/docs/avatar/"],
+          },
         ],
       },
     ],

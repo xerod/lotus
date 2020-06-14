@@ -6,9 +6,11 @@
       class="pb-4 mb-4 border-ui-border"
       :class="{ 'border-b': index < sidebar.sections.length - 1 }"
     >
-      <h3 class="pt-0 mt-0 mb-1 text-sm tracking-tight uppercase border-none">
+      <p
+        class="pt-0 mt-0 mb-1 text-xs font-bold text-gray-500 uppercase border-none"
+      >
         {{ section.title }}
-      </h3>
+      </p>
 
       <ul class="max-w-full pl-2 mb-0">
         <li
