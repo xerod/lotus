@@ -10696,6 +10696,13 @@ vue-feather-icons@^5.0.0:
   dependencies:
     babel-helper-vue-jsx-merge-props "^2.0.2"
 
+vue-heroicons@^0.9.4:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/vue-heroicons/-/vue-heroicons-0.9.4.tgz#bc233ee35fbc8c41855a9848cde386c151a87c50"
+  integrity sha512-iylylWRrO2O5F9LC1yYF2h5TNo9+ijanJwBWaJIpuA8cVgisxrr5LJP9pzmEOqxikjgrTR+ZIrSmg+id1vWfDw==
+  dependencies:
+    vue "^2.6.10"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
