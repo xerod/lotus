@@ -4,15 +4,16 @@ sidebar: "docs"
 prev: "/docs/settings/"
 ---
 
-import Alert from '~/components/Alert.vue'
+import pAlert from '~/components/Alert.vue'
+import data from '../data/alerts.json'
 
 # Alerts
 
-the `p-alert`component is used to display important information to the user trough the use of contextual types icon and color.
+the `p-alert` component is used to display important information to the user trough the use of contextual types icon and color.
 
 ### Example
 
-<Alert title="Attention Needed" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor eget enim congue, sit amet tristique leo efficitur." type="info" />
+<p-alert title="Attention Needed" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor eget enim congue, sit amet tristique leo efficitur." type="info" />
 
 ### Code
 
@@ -30,19 +31,28 @@ the `p-alert`component is used to display important information to the user trou
     <div class="table min-w-full shadow-sm overflow-hidden sm:rounded border border-ui-border">
         <table>
             <thead>
-                <th>Property</th>
-                <th>Type</th>
-                <th>Default</th>
-                <th>Accepted Value</th>
-                <th>Description</th>
+                <th class="text-left">Property</th>
+                <th class="text-center">Type</th>
+                <th class="text-center">Default</th>
+                <th class="text-center">Accepted Value</th>
+                <th class="text-center">Description</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>type</td>
-                    <td>String</td>
-                    <td>info</td>
-                    <td>info, success, warning, danger</td>
-                    <td>Type of alert</td>
+                <tr v-for="(value,index) in data.props" :key="index">
+                    <td class="text-left">{{ value.property }}</td>
+                    <td class="text-center">
+                        <code>{{ value.type }}</code>
+                    </td>
+                    <td class="text-center">{{ value.default }}</td>
+                    <td class="flex flex-wrap text-center">
+                        <div 
+                        v-for="(value,index) in value.accepted_value" :key="index"
+                        class="mr-1 my-1 px-1 shadow-sm border rounded"
+                        >
+                            {{ value }}
+                        </div>
+                    </td>
+                    <td class="text-center">{{ value.description }}</td>
                 </tr>
             </tbody>
         </table>

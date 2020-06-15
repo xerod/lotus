@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: "pAlert",
   props: {
     type: {
       required: true,

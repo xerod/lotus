@@ -1,0 +1,23 @@
+{
+  "props": [
+    {
+      "property": "type",
+      "type": "String",
+      "default": "info",
+      "accepted_value": ["success", "warning", "danger", "info"],
+      "description": "Type of alert"
+    },
+    {
+      "property": "title",
+      "type": "String",
+      "default": "-",
+      "description": "Title of alert"
+    },
+    {
+      "property": "body",
+      "type": "String",
+      "default": "-",
+      "description": "Description of alert"
+    }
+  ]
+}

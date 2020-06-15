@@ -314,11 +314,11 @@ header {
 }
 
 table {
-  @apply min-w-full;
+  @apply min-w-full text-sm;
 
   td,
   th {
-    @apply py-3 px-2 whitespace-no-wrap;
+    @apply p-3 whitespace-no-wrap;
   }
 
   tr {
