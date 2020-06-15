@@ -129,17 +129,17 @@ export default {
 :root {
   --color-ui-background: theme("colors.white");
   --color-ui-typo: theme("colors.gray.700");
-  --color-ui-sidebar: theme("colors.gray.200");
-  --color-ui-border: theme("colors.gray.300");
+  --color-ui-sidebar: theme("colors.cool-gray.100");
+  --color-ui-border: theme("colors.gray.200");
   --color-ui-primary: theme("colors.green.700");
 }
 
 html[lights-out] {
-  --color-ui-background: theme("colors.gray.900");
-  --color-ui-typo: theme("colors.gray.100");
-  --color-ui-sidebar: theme("colors.gray.800");
-  --color-ui-border: theme("colors.gray.800");
-  --color-ui-primary: theme("colors.green.600");
+  --color-ui-background: theme("colors.cool-gray.900");
+  --color-ui-typo: theme("colors.cool-gray.100");
+  --color-ui-sidebar: theme("colors.cool-gray.800");
+  --color-ui-border: theme("colors.cool-gray.800");
+  --color-ui-primary: theme("colors.green.500");
 
   pre[class*="language-"],
   code[class*="language-"] {
