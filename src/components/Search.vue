@@ -18,7 +18,7 @@
         :value="query"
         class="block w-full py-2 pl-10 pr-4 border-2 rounded-lg bg-ui-sidebar border-ui-sidebar outline-none focus:bg-ui-background"
         :class="{ 'rounded-b-none': showResult }"
-        placeholder="Search Documentation..."
+        placeholder="Search Docs... (Press '/' to focus)"
         @focus="focused = true"
         @blur="focused = false"
         @input="
@@ -47,14 +47,14 @@
           @mousedown="go"
           class="border-ui-sidebar mx-2"
           :class="{
-            'border-b': index + 1 !== results.length
+            'border-b': index + 1 !== results.length,
           }"
         >
           <g-link
             :to="result.path + result.anchor"
             class="block p-2 -mx-2 text-base font-bold rounded-lg"
             :class="{
-              'bg-ui-sidebar': focusIndex === index
+              'bg-ui-sidebar': focusIndex === index,
             }"
           >
             <span v-if="result.value === result.title">
@@ -99,36 +99,39 @@ import { ChevronRightIcon, SearchIcon } from "vue-feather-icons";
 export default {
   components: {
     ChevronRightIcon,
-    SearchIcon
+    SearchIcon,
   },
 
   data() {
     return {
       query: "",
       focusIndex: -1,
-      focused: false
+      focused: false,
     };
+  },
+  created() {
+    window.addEventListener("keyup", this.listenForFocusFilterShortcut);
   },
   computed: {
     results() {
       const fuse = new Fuse(this.headings, {
         keys: ["value"],
-        threshold: 0.25
+        threshold: 0.25,
       });
 
       return fuse.search(this.query).slice(0, 15);
     },
     headings() {
       let result = [];
-      const allPages = this.$static.docs.edges.map(edge => edge.node);
+      const allPages = this.$static.docs.edges.map((edge) => edge.node);
 
       // Create the array of all headings of all pages.
-      allPages.forEach(page => {
-        page.headings.forEach(heading => {
+      allPages.forEach((page) => {
+        page.headings.forEach((heading) => {
           result.push({
             ...heading,
             path: page.path,
-            title: page.title
+            title: page.title,
           });
         });
       });
@@ -138,7 +141,7 @@ export default {
     showResult() {
       // Show results, if the input is focused and the query is not empty.
       return this.focused && this.query.length > 0;
-    }
+    },
   },
   methods: {
     increment() {
@@ -171,10 +174,17 @@ export default {
       // Unfocus the input and reset the query.
       this.$refs.input.blur();
       this.query = "";
-    }
-  }
+    },
+    listenForFocusFilterShortcut(event) {
+      if (event.keyCode === 191) {
+        this.$refs.input.focus();
+      }
+      if (event.keyCode === 27) {
+        this.$refs.input.blur();
+      }
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>
