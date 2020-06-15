@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row p-5 rounded" :class="bgColor">
     <heroicon
-      name="exclamation"
+      :name="iconName"
       width="50"
       class="mr-3 fill-current"
       :class="textColor"
@@ -33,11 +33,6 @@ export default {
       required: true,
       type: String,
     },
-    icon: {
-      required: false,
-      type: String,
-      default: "box",
-    },
   },
   computed: {
     bgColor() {
@@ -55,6 +50,20 @@ export default {
         " text-red-900 ": this.type == "danger",
         " text-blue-900 ": this.type == "info",
       };
+    },
+    iconName() {
+      if (this.type == "warning") {
+        return "exclamation";
+      }
+      if (this.type == "success") {
+        return "check-circle";
+      }
+      if (this.type == "danger") {
+        return "x-circle";
+      }
+      if (this.type == "info") {
+        return "information";
+      }
     },
   },
 };

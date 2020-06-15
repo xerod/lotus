@@ -2,13 +2,18 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import DefaultLayout from "~/layouts/Default.vue";
 import HeroIcon from "vue-heroicons";
-import { exclamation } from "vue-heroicons/src/icons";
+import {
+  exclamation,
+  xCircle,
+  checkCircle,
+  information,
+} from "vue-heroicons/src/icons";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
 
-  HeroIcon.add([exclamation]);
+  HeroIcon.add([exclamation, xCircle, checkCircle, information]);
   Vue.use(HeroIcon);
 
   router.beforeEach((to, _from, next) => {
