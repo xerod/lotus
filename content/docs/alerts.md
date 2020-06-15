@@ -13,7 +13,7 @@ the `p-alert` component is used to display important information to the user tro
 
 ### Example
 
-<p-alert title="Attention Needed" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor eget enim congue, sit amet tristique leo efficitur." type="info" />
+<p-alert title="Attention Needed" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor eget enim congue, sit amet tristique leo efficitur." type="danger" />
 
 ### Code
 
@@ -21,7 +21,7 @@ the `p-alert` component is used to display important information to the user tro
 <Alert
   title="Attention Needed"
   body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor eget enim congue, sit amet tristique leo efficitur."
-  type="warning"
+  type="danger"
 />
 ```
 
@@ -49,7 +49,7 @@ the `p-alert` component is used to display important information to the user tro
                         v-for="(value,index) in value.accepted_value" :key="index"
                         class="mr-1 my-1 px-1 shadow-sm border rounded"
                         >
-                            {{ value }}
+                            <span class="text-gray-600 text-xs">{{ value }}</span>
                         </div>
                     </td>
                     <td class="text-center">{{ value.description }}</td>

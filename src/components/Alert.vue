@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row p-5 rounded" :class="bgColor">
+  <div class="flex flex-row p-5 rounded-lg" :class="bgColor">
     <heroicon
       :name="iconName"
       width="50"
@@ -38,18 +38,18 @@ export default {
   computed: {
     bgColor() {
       return {
-        " bg-yellow-200 ": this.type == "warning",
-        " bg-green-200 ": this.type == "success",
-        " bg-red-200 ": this.type == "danger",
-        " bg-blue-200 ": this.type == "info",
+        " bg-yellow-50 ": this.type == "warning",
+        " bg-green-50 ": this.type == "success",
+        " bg-red-50 ": this.type == "danger",
+        " bg-blue-50 ": this.type == "info",
       };
     },
     textColor() {
       return {
-        " text-yellow-900 ": this.type == "warning",
-        " text-green-900 ": this.type == "success",
-        " text-red-900 ": this.type == "danger",
-        " text-blue-900 ": this.type == "info",
+        " text-yellow-800 ": this.type == "warning",
+        " text-green-800 ": this.type == "success",
+        " text-red-800 ": this.type == "danger",
+        " text-blue-800 ": this.type == "info",
       };
     },
     iconName() {
