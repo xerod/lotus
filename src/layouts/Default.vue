@@ -62,36 +62,36 @@ export default {
     Sidebar,
     LayoutHeader,
     MenuIcon,
-    XIcon
+    XIcon,
   },
   data() {
     return {
       headerHeight: 0,
-      sidebarOpen: false
+      sidebarOpen: false,
     };
   },
   watch: {
     sidebarOpen: function(isOpen) {
       document.body.classList.toggle("overflow-hidden", isOpen);
-    }
+    },
   },
   methods: {
     setHeaderHeight() {
       this.$nextTick(() => {
         this.headerHeight = this.$refs.header.offsetHeight;
       });
-    }
+    },
   },
   computed: {
     sidebarStyle() {
       return {
         top: this.headerHeight + "px",
-        height: `calc(100vh - ${this.headerHeight}px)`
+        height: `calc(100vh - ${this.headerHeight}px)`,
       };
     },
     hasSidebar() {
       return this.$page && this.headerHeight > 0;
-    }
+    },
   },
   mounted() {
     this.setHeaderHeight();
@@ -102,26 +102,26 @@ export default {
         {
           key: "og:type",
           name: "og:type",
-          content: "website"
+          content: "website",
         },
         {
           key: "twitter:card",
           name: "twitter:card",
-          content: "summary_large_image"
+          content: "summary_large_image",
         },
         {
           key: "og:image",
           name: "og:image",
-          content: process.env.SITE_URL + "/logo.jpg"
+          content: process.env.SITE_URL + "/logo.jpg",
         },
         {
           key: "twitter:image",
           name: "twitter:image",
-          content: process.env.SITE_URL + "/logo.jpg"
-        }
-      ]
+          content: process.env.SITE_URL + "/logo.jpg",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -314,17 +314,11 @@ header {
 }
 
 table {
-  @apply text-left mb-6;
+  @apply min-w-full;
 
   td,
   th {
-    @apply py-3 px-4;
-    &:first-child {
-      @apply pl-0;
-    }
-    &:last-child {
-      @apply pr-0;
-    }
+    @apply py-3 px-2 whitespace-no-wrap;
   }
 
   tr {
@@ -332,6 +326,10 @@ table {
     &:last-child {
       @apply border-b-0;
     }
+  }
+
+  thead {
+    @apply bg-ui-sidebar;
   }
 }
 
