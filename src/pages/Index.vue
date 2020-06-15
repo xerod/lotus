@@ -5,7 +5,7 @@
         <div class="flex flex-col items-center mb-2 text-ui-primary">
           <Logo :width="160" />
           <h2 class="text-5xl font-black border-none">
-            Purifry
+            {{ this.$static.metadata.siteName }}
           </h2>
         </div>
         <h1 class="text-4xl text-center lg:text-5xl">
@@ -98,6 +98,14 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <script>
 import Logo from "@/components/Logo";
 import {
@@ -105,7 +113,7 @@ import {
   ZapIcon,
   CodeIcon,
   MoonIcon,
-  SearchIcon
+  SearchIcon,
 } from "vue-feather-icons";
 
 export default {
@@ -115,7 +123,7 @@ export default {
     ZapIcon,
     CodeIcon,
     MoonIcon,
-    SearchIcon
+    SearchIcon,
   },
 
   metaInfo() {
@@ -128,31 +136,31 @@ export default {
       meta: [
         {
           name: "description",
-          content: description
+          content: description,
         },
         {
           key: "og:title",
           name: "og:title",
-          content: title
+          content: title,
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: title
+          content: title,
         },
         {
           key: "og:description",
           name: "og:description",
-          content: description
+          content: description,
         },
         {
           key: "twitter:description",
           name: "twitter:description",
-          content: description
-        }
-      ]
+          content: description,
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
