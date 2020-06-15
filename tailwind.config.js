@@ -1,6 +1,11 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         ui: {
           background: "var(--color-ui-background)",
@@ -23,5 +28,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [require("@tailwindcss/ui")],
 };
