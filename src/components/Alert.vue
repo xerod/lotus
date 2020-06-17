@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-row p-5 rounded-lg" :class="bgColor">
+  <div class="card flex flex-row p-5 rounded-lg" :class="bgColor">
     <heroicon
       :name="iconName"
-      width="50"
-      class="mr-3 fill-current"
+      width="30"
+      class="mr-3 mt-1 fill-current"
       :class="textColor"
     />
     <div>
-      <p class="font-bold mb-2" :class="textColor">
+      <p class="font-bold mb-1" :class="textColor">
         {{ title }}
       </p>
       <p class="m-0" :class="textColor">
@@ -37,20 +37,10 @@ export default {
   },
   computed: {
     bgColor() {
-      return {
-        " bg-yellow-50 ": this.type == "warning",
-        " bg-green-50 ": this.type == "success",
-        " bg-red-50 ": this.type == "danger",
-        " bg-blue-50 ": this.type == "info",
-      };
+      return "bg-" + this.type + "-100";
     },
     textColor() {
-      return {
-        " text-yellow-800 ": this.type == "warning",
-        " text-green-800 ": this.type == "success",
-        " text-red-800 ": this.type == "danger",
-        " text-blue-800 ": this.type == "info",
-      };
+      return "text-" + this.type + "-800";
     },
     iconName() {
       if (this.type == "warning") {

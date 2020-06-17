@@ -4,16 +4,16 @@ sidebar: "docs"
 prev: "/docs/settings/"
 ---
 
-import pAlert from '~/components/Alert.vue'
+import Alerts from '../playground/alerts.vue'
 import data from '../data/alerts.json'
 
 # Alerts
 
 the `p-alert` component is used to display important information to the user trough the use of contextual types icon and color.
 
-### Example
+### Playground
 
-<p-alert title="Attention Needed" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor eget enim congue, sit amet tristique leo efficitur." type="danger" />
+<Alerts />
 
 ### Code
 
@@ -47,9 +47,9 @@ the `p-alert` component is used to display important information to the user tro
                     <td class="flex flex-wrap text-center">
                         <div 
                         v-for="(value,index) in value.accepted_value" :key="index"
-                        class="mr-1 my-1 px-1 shadow-sm border rounded"
+                        class="mr-1 mt-2"
                         >
-                            <span class="text-gray-600 text-xs">{{ value }}</span>
+                            <code>{{ value }}</code>
                         </div>
                     </td>
                     <td class="text-center">{{ value.description }}</td>

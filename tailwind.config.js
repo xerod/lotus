@@ -1,3 +1,4 @@
+const { colors } = require("tailwindcss/defaultTheme");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -7,12 +8,16 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        success: colors.green,
+        warning: colors.yellow,
+        danger: colors.red,
+        info: colors.blue,
         ui: {
           background: "var(--color-ui-background)",
           sidebar: "var(--color-ui-sidebar)",
           typo: "var(--color-ui-typo)",
-          primary: "var(--color-ui-primary)",
           border: "var(--color-ui-border)",
+          primary: "var(--color-ui-primary)",
         },
       },
       spacing: {
