@@ -2,15 +2,15 @@
   <div class="card flex flex-row p-5 rounded-lg" :class="bgColor">
     <heroicon
       :name="iconName"
-      width="30"
-      class="mr-3 mt-1 fill-current"
-      :class="textColor"
+      width="40"
+      class="fill-current"
+      :class="iconClass"
     />
     <div>
-      <p class="font-bold mb-1" :class="textColor">
+      <p class="font-medium leading-6" :class="titleColor">
         {{ title }}
       </p>
-      <p class="m-0" :class="textColor">
+      <p class="m-0 leading-5 text-sm" :class="bodyColor">
         {{ body }}
       </p>
     </div>
@@ -37,10 +37,17 @@ export default {
   },
   computed: {
     bgColor() {
-      return "bg-" + this.type + "-100";
+      return "bg-" + this.type + "-50 ";
     },
-    textColor() {
-      return "text-" + this.type + "-800";
+    titleColor() {
+      if (!!this.body) {
+        return "text-" + this.type + "-700 mb-1";
+      } else {
+        return "text-" + this.type + "-700 m-0";
+      }
+    },
+    bodyColor() {
+      return "text-" + this.type + "-700";
     },
     iconName() {
       if (this.type == "warning") {
@@ -54,6 +61,13 @@ export default {
       }
       if (this.type == "info") {
         return "information";
+      }
+    },
+    iconClass() {
+      if (!!this.body) {
+        return "flex-shrink-0 text-" + this.type + "-500 mr-3 mt-1";
+      } else {
+        return "flex-shrink-0 text-" + this.type + "-500 mr-2";
       }
     },
   },
