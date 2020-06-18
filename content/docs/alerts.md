@@ -11,14 +11,12 @@ import data from '../data/alerts.json'
 
 the `p-alert` component is used to display important information to the user trough the use of contextual types icon and color.
 
-### Playground
-
 <Alerts />
 
 ### Code
 
 ```js
-<Alert
+<p-alert
   title="Attention Needed"
   body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor eget enim congue, sit amet tristique leo efficitur."
   type="danger"

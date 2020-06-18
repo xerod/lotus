@@ -3,12 +3,12 @@
     <p-alert :title="alertTitle" :body="alertBody" :type="alertType" />
     <template slot="props">
       <label class="block mt-2">
-        <span class="text-sm">Alert Type</span>
+        <span class="text-xs text-gray-500 font-medium">Alert Type</span>
         <select
           placeholder="Select type"
           labelTop="Alert type"
           v-model="alertType"
-          class="form-select text-sm mt-1 px-2 py-1 block w-full"
+          class="text-sm mt-1 px-2 py-1 block w-full"
         >
           <option :key="type" v-for="type in types" :value="type"
             >{{ type }}
@@ -16,16 +16,16 @@
         </select>
       </label>
       <label class="block mt-2">
-        <span class="text-sm">Title</span>
+        <span class="text-xs text-gray-500 font-medium">Title</span>
         <input
-          class="form-input text-sm mt-1 px-2 py-1 block w-full"
+          class="text-sm mt-1 px-2 py-1 block w-full"
           v-model="alertTitle"
         />
       </label>
       <label class="block mt-2">
-        <span class="text-sm">Description</span>
+        <span class="text-xs text-gray-500 font-medium">Description</span>
         <input
-          class="form-input text-sm mt-1 px-2 py-1 block w-full"
+          class="text-sm mt-1 px-2 py-1 block w-full"
           v-model="alertBody"
         />
       </label>
