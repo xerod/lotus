@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import pAlert from "~/components/Alert.vue";
+import pAlert from "../components/Alert.vue";
 import Playground from "~/components/Playground.vue";
 
 export default {
