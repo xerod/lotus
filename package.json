@@ -10,6 +10,7 @@
     "@gridsome/vue-remark": "^0.2.1",
     "@tailwindcss/ui": "^0.3.0",
     "gridsome": "^0.7.0",
+    "stylelint-config-recommended": "^3.0.0",
     "vue-heroicons": "^0.9.4"
   },
   "devDependencies": {
