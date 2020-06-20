@@ -9,42 +9,94 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        //the ui is only used for documentation
-        pale: {
-          primary: "var(--colors-pale-primary)",
-          secondary: "var(--colors-pale-secondary)",
-          tertiary: "var(--colors-pale-tertiary)",
-        },
-        info: {
-          primary: "var(--colors-info-primary)",
-          secondary: "var(--colors-info-secondary)",
-          tertiary: "var(--colors-info-tertiary)",
-          pale: "var(--colors-info-pale)",
-        },
-        success: {
-          primary: "var(--colors-success-primary)",
-          secondary: "var(--colors-success-secondary)",
-          tertiary: "var(--colors-success-tertiary)",
-          pale: "var(--colors-success-pale)",
-        },
-        warning: {
-          primary: "var(--colors-warning-primary)",
-          secondary: "var(--colors-warning-secondary)",
-          tertiary: "var(--colors-warning-tertiary)",
-          pale: "var(--colors-warning-pale)",
-        },
-        danger: {
-          primary: "var(--colors-danger-primary)",
-          secondary: "var(--colors-danger-secondary)",
-          tertiary: "var(--colors-danger-tertiary)",
-          pale: "var(--colors-danger-pale)",
-        },
         ui: {
           background: "var(--color-ui-background)",
           sidebar: "var(--color-ui-sidebar)",
           typo: "var(--color-ui-typo)",
           border: "var(--color-ui-border)",
           primary: "var(--color-ui-primary)",
+        },
+      },
+      textColor: {
+        info: {
+          primary: "var(--text-info-primary)",
+          secondary: "var(--text-info-secondary)",
+          tertiary: "var(--text-info-tertiary)",
+        },
+        success: {
+          primary: "var(--text-success-primary)",
+          secondary: "var(--text-success-secondary)",
+          tertiary: "var(--text-success-tertiary)",
+        },
+        warning: {
+          primary: "var(--text-warning-primary)",
+          secondary: "var(--text-warning-secondary)",
+          tertiary: "var(--text-warning-tertiary)",
+        },
+        danger: {
+          primary: "var(--text-danger-primary)",
+          secondary: "var(--text-danger-secondary)",
+          tertiary: "var(--text-danger-tertiary)",
+        },
+      },
+      backgroundColor: {
+        info: {
+          primary: "var(--bg-info-primary)",
+          secondary: "var(--bg-info-secondary)",
+          tertiary: "var(--bg-info-tertiary)",
+          pale: "var(--bg-info-pale)",
+        },
+        success: {
+          primary: "var(--bg-success-primary)",
+          secondary: "var(--bg-success-secondary)",
+          tertiary: "var(--bg-success-tertiary)",
+          pale: "var(--bg-success-pale)",
+        },
+        warning: {
+          primary: "var(--bg-warning-primary)",
+          secondary: "var(--bg-warning-secondary)",
+          tertiary: "var(--bg-warning-tertiary)",
+          pale: "var(--bg-warning-pale)",
+        },
+        danger: {
+          primary: "var(--bg-danger-primary)",
+          secondary: "var(--bg-danger-secondary)",
+          tertiary: "var(--bg-danger-tertiary)",
+          pale: "var(--bg-danger-pale)",
+        },
+      },
+      borderColor: {
+        info: {
+          primary: "var(--border-info-primary)",
+          secondary: "var(--border-info-secondary)",
+          tertiary: "var(--border-info-tertiary)",
+        },
+        success: {
+          primary: "var(--border-success-primary)",
+          secondary: "var(--border-success-secondary)",
+          tertiary: "var(--border-success-tertiary)",
+        },
+        warning: {
+          primary: "var(--border-warning-primary)",
+          secondary: "var(--border-warning-secondary)",
+          tertiary: "var(--border-warning-tertiary)",
+        },
+        danger: {
+          primary: "var(--border-danger-primary)",
+          secondary: "var(--border-danger-secondary)",
+          tertiary: "var(--border-danger-tertiary)",
+        },
+      },
+      placeholderColor: {
+        info: {
+          primary: "var(--placeholder-info-primary)",
+          secondary: "var(--placeholder-info-secondary)",
+          tertiary: "var(--placeholder-info-tertiary)",
+        },
+        danger: {
+          primary: "var(--placeholder-danger-primary)",
+          secondary: "var(--placeholder-danger-secondary)",
+          tertiary: "var(--placeholder-danger-tertiary)",
         },
       },
       boxShadow: {

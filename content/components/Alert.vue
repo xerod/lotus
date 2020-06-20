@@ -57,11 +57,11 @@ export default {
   },
   computed: {
     textClasses() {
-      return " text-" + this.type + "-primary flex flex-row ";
+      return " text-" + this.type + "-secondary flex flex-row ";
     },
     baseClasses() {
       let classes = [baseClass];
-      let styleClasses = [this.textClasses, " bg-" + this.type + "-pale"];
+      let styleClasses = [this.textClasses, "bg-" + this.type + "-pale"];
 
       return classes.concat(styleClasses);
     },

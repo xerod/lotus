@@ -134,26 +134,69 @@ export default {
   --color-ui-border: theme("colors.gray.200");
   --color-ui-primary: theme("colors.green.700");
 
-  // Component color
-  --colors-pale-primary: theme("colors.gray.800");
-  --colors-pale-secondary: theme("colors.gray.600");
-  --colors-pale-tertiary: theme("colors.gray.400");
-  --colors-info-primary: theme("colors.blue.700");
-  --colors-info-secondary: theme("colors.blue.600");
-  --colors-info-tertiary: theme("colors.blue.400");
-  --colors-info-pale: theme("colors.blue.50");
-  --colors-success-primary: theme("colors.green.700");
-  --colors-success-secondary: theme("colors.green.600");
-  --colors-success-tertiary: theme("colors.green.400");
-  --colors-success-pale: theme("colors.green.50");
-  --colors-warning-primary: theme("colors.yellow.700");
-  --colors-warning-secondary: theme("colors.yellow.600");
-  --colors-warning-tertiary: theme("colors.yellow.400");
-  --colors-warning-pale: theme("colors.yellow.50");
-  --colors-danger-primary: theme("colors.red.700");
-  --colors-danger-secondary: theme("colors.red.600");
-  --colors-danger-tertiary: theme("colors.red.400");
-  --colors-danger-pale: theme("colors.red.50");
+  // Text color
+  --text-info-primary: theme("colors.blue.900");
+  --text-info-secondary: theme("colors.blue.600");
+  --text-info-tertiary: theme("colors.blue.300");
+
+  --text-success-primary: theme("colors.green.900");
+  --text-success-secondary: theme("colors.green.600");
+  --text-success-tertiary: theme("colors.green.300");
+
+  --text-warning-primary: theme("colors.yellow.900");
+  --text-warning-secondary: theme("colors.yellow.600");
+  --text-warning-tertiary: theme("colors.yellow.300");
+
+  --text-danger-primary: theme("colors.red.900");
+  --text-danger-secondary: theme("colors.red.600");
+  --text-danger-tertiary: theme("colors.red.300");
+
+  // Background color
+  --bg-info-primary: theme("colors.blue.700");
+  --bg-info-secondary: theme("colors.blue.600");
+  --bg-info-tertiary: theme("colors.blue.500");
+  --bg-info-pale: theme("colors.blue.50");
+
+  --bg-success-primary: theme("colors.green.700");
+  --bg-success-secondary: theme("colors.green.600");
+  --bg-success-tertiary: theme("colors.green.500");
+  --bg-success-pale: theme("colors.green.50");
+
+  --bg-warning-primary: theme("colors.yellow.700");
+  --bg-warning-secondary: theme("colors.yellow.600");
+  --bg-warning-tertiary: theme("colors.yellow.500");
+  --bg-warning-pale: theme("colors.yellow.50");
+
+  --bg-danger-primary: theme("colors.red.700");
+  --bg-danger-secondary: theme("colors.red.600");
+  --bg-danger-tertiary: theme("colors.red.500");
+  --bg-danger-pale: theme("colors.red.50");
+
+  // Border color
+  --border-info-primary: theme("colors.white");
+  --border-info-secondary: theme("colors.white");
+  --border-info-tertiary: theme("colors.white");
+
+  --border-success-primary: theme("colors.white");
+  --border-success-secondary: theme("colors.white");
+  --border-success-tertiary: theme("colors.white");
+
+  --border-warning-primary: theme("colors.white");
+  --border-warning-secondary: theme("colors.white");
+  --border-warning-tertiary: theme("colors.white");
+
+  --border-danger-primary: theme("colors.white");
+  --border-danger-secondary: theme("colors.white");
+  --border-danger-tertiary: theme("colors.white");
+
+  // Placeholder color
+  --placeholder-info-primary: theme("colors.white");
+  --placeholder-info-secondary: theme("colors.white");
+  --placeholder-info-tertiary: theme("colors.white");
+
+  --placeholder-danger-primary: theme("colors.white");
+  --placeholder-danger-secondary: theme("colors.white");
+  --placeholder-danger-tertiary: theme("colors.white");
 
   // Shadow outline color for component
   --shadow-outline-default: theme("colors.white");
@@ -171,26 +214,43 @@ html[lights-out] {
   --color-ui-border: theme("colors.cool-gray.800");
   --color-ui-primary: theme("colors.green.500");
 
-  // Component color
-  --colors-pale-primary: theme("colors.gray.800");
-  --colors-pale-secondary: theme("colors.gray.600");
-  --colors-pale-tertiary: theme("colors.gray.400");
-  --colors-info-primary: theme("colors.blue.100");
-  --colors-info-secondary: theme("colors.blue.200");
-  --colors-info-tertiary: theme("colors.blue.400");
-  --colors-info-pale: rgba(44, 82, 130, 0.5);
-  --colors-success-primary: theme("colors.green.100");
-  --colors-success-secondary: theme("colors.green.200");
-  --colors-success-tertiary: theme("colors.green.400");
-  --colors-success-pale: rgba(47, 133, 90, 0.5);
-  --colors-warning-primary: theme("colors.yellow.100");
-  --colors-warning-secondary: theme("colors.yellow.200");
-  --colors-warning-tertiary: theme("colors.yellow.400");
-  --colors-warning-pale: rgba(183, 121, 31, 0.5);
-  --colors-danger-primary: theme("colors.red.100");
-  --colors-danger-secondary: theme("colors.red.200");
-  --colors-danger-tertiary: theme("colors.red.400");
-  --colors-danger-pale: rgba(197, 48, 48, 0.5);
+  // Text color
+  --text-info-primary: theme("colors.blue.50");
+  --text-info-secondary: theme("colors.blue.100");
+  --text-info-tertiary: theme("colors.blue.300");
+
+  --text-success-primary: theme("colors.green.50");
+  --text-success-secondary: theme("colors.green.100");
+  --text-success-tertiary: theme("colors.green.300");
+
+  --text-warning-primary: theme("colors.yellow.50");
+  --text-warning-secondary: theme("colors.yellow.100");
+  --text-warning-tertiary: theme("colors.yellow.300");
+
+  --text-danger-primary: theme("colors.red.50");
+  --text-danger-secondary: theme("colors.red.100");
+  --text-danger-tertiary: theme("colors.red.300");
+
+  // Background color
+  --bg-info-primary: theme("colors.blue.600");
+  --bg-info-secondary: theme("colors.blue.700");
+  --bg-info-tertiary: theme("colors.blue.800");
+  --bg-info-pale: rgba(42, 67, 101, 0.5);
+
+  --bg-success-primary: theme("colors.green.600");
+  --bg-success-secondary: theme("colors.green.700");
+  --bg-success-tertiary: theme("colors.green.800");
+  --bg-success-pale: rgba(35, 78, 82, 0.5);
+
+  --bg-warning-primary: theme("colors.yellow.600");
+  --bg-warning-secondary: theme("colors.yellow.700");
+  --bg-warning-tertiary: theme("colors.yellow.800");
+  --bg-warning-pale: rgba(116, 66, 16, 0.5);
+
+  --bg-danger-primary: theme("colors.red.600");
+  --bg-danger-secondary: theme("colors.red.700");
+  --bg-danger-tertiary: theme("colors.red.800");
+  --bg-danger-pale: rgba(116, 42, 42, 0.5);
 
   // Shadow outline color for component
   --shadow-outline-default: theme("colors.white");
