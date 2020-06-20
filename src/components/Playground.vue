@@ -4,12 +4,12 @@
     style="min-height: 200px"
   >
     <div
-      class="flex flex-wrap w-4/5 px-4 overflow-scroll overflow-hidden justify-center items-center"
+      class="flex flex-wrap w-4/6 px-4 overflow-scroll overflow-hidden justify-center items-center"
     >
       <slot></slot>
     </div>
     <div class="flex flex-col border-l px-4 py-6 border-ui-border">
-      <span class="text-lg font-bold mb-2">Props</span>
+      <span class="text-2xl font-bold mb-2">Props</span>
       <slot name="props"></slot>
     </div>
   </div>
