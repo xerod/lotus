@@ -127,19 +127,77 @@ export default {
 
 <style lang="scss">
 :root {
+  // General ui color
   --color-ui-background: theme("colors.white");
   --color-ui-typo: theme("colors.gray.700");
   --color-ui-sidebar: theme("colors.cool-gray.100");
   --color-ui-border: theme("colors.gray.200");
   --color-ui-primary: theme("colors.green.700");
+
+  // Component color
+  --colors-pale-primary: theme("colors.gray.800");
+  --colors-pale-secondary: theme("colors.gray.600");
+  --colors-pale-tertiary: theme("colors.gray.400");
+  --colors-info-primary: theme("colors.blue.700");
+  --colors-info-secondary: theme("colors.blue.600");
+  --colors-info-tertiary: theme("colors.blue.400");
+  --colors-info-pale: theme("colors.blue.50");
+  --colors-success-primary: theme("colors.green.700");
+  --colors-success-secondary: theme("colors.green.600");
+  --colors-success-tertiary: theme("colors.green.400");
+  --colors-success-pale: theme("colors.green.50");
+  --colors-warning-primary: theme("colors.yellow.700");
+  --colors-warning-secondary: theme("colors.yellow.600");
+  --colors-warning-tertiary: theme("colors.yellow.400");
+  --colors-warning-pale: theme("colors.yellow.50");
+  --colors-danger-primary: theme("colors.red.700");
+  --colors-danger-secondary: theme("colors.red.600");
+  --colors-danger-tertiary: theme("colors.red.400");
+  --colors-danger-pale: theme("colors.red.50");
+
+  // Shadow outline color for component
+  --shadow-outline-default: theme("colors.white");
+  --shadow-outline-success: theme("colors.white");
+  --shadow-outline-warning: theme("colors.white");
+  --shadow-outline-danger: theme("colors.white");
+  --shadow-outline-info: theme("colors.white");
 }
 
 html[lights-out] {
+  // General ui color for dark mode
   --color-ui-background: theme("colors.cool-gray.900");
   --color-ui-typo: theme("colors.cool-gray.100");
   --color-ui-sidebar: theme("colors.cool-gray.800");
   --color-ui-border: theme("colors.cool-gray.800");
   --color-ui-primary: theme("colors.green.500");
+
+  // Component color
+  --colors-pale-primary: theme("colors.gray.800");
+  --colors-pale-secondary: theme("colors.gray.600");
+  --colors-pale-tertiary: theme("colors.gray.400");
+  --colors-info-primary: theme("colors.blue.100");
+  --colors-info-secondary: theme("colors.blue.200");
+  --colors-info-tertiary: theme("colors.blue.400");
+  --colors-info-pale: rgba(44, 82, 130, 0.5);
+  --colors-success-primary: theme("colors.green.100");
+  --colors-success-secondary: theme("colors.green.200");
+  --colors-success-tertiary: theme("colors.green.400");
+  --colors-success-pale: rgba(47, 133, 90, 0.5);
+  --colors-warning-primary: theme("colors.yellow.100");
+  --colors-warning-secondary: theme("colors.yellow.200");
+  --colors-warning-tertiary: theme("colors.yellow.400");
+  --colors-warning-pale: rgba(183, 121, 31, 0.5);
+  --colors-danger-primary: theme("colors.red.100");
+  --colors-danger-secondary: theme("colors.red.200");
+  --colors-danger-tertiary: theme("colors.red.400");
+  --colors-danger-pale: rgba(197, 48, 48, 0.5);
+
+  // Shadow outline color for component
+  --shadow-outline-default: theme("colors.white");
+  --shadow-outline-success: theme("colors.white");
+  --shadow-outline-warning: theme("colors.white");
+  --shadow-outline-danger: theme("colors.white");
+  --shadow-outline-info: theme("colors.white");
 
   pre[class*="language-"],
   code[class*="language-"] {
