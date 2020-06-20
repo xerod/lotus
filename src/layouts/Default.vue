@@ -235,22 +235,22 @@ html[lights-out] {
   --bg-info-primary: theme("colors.blue.600");
   --bg-info-secondary: theme("colors.blue.700");
   --bg-info-tertiary: theme("colors.blue.800");
-  --bg-info-pale: rgba(42, 67, 101, 0.5);
+  --bg-info-pale: rgba(42, 67, 101, 0.75);
 
   --bg-success-primary: theme("colors.green.600");
   --bg-success-secondary: theme("colors.green.700");
   --bg-success-tertiary: theme("colors.green.800");
-  --bg-success-pale: rgba(35, 78, 82, 0.5);
+  --bg-success-pale: rgba(35, 78, 82, 0.75);
 
   --bg-warning-primary: theme("colors.yellow.600");
   --bg-warning-secondary: theme("colors.yellow.700");
   --bg-warning-tertiary: theme("colors.yellow.800");
-  --bg-warning-pale: rgba(116, 66, 16, 0.5);
+  --bg-warning-pale: rgba(116, 66, 16, 0.75);
 
   --bg-danger-primary: theme("colors.red.600");
   --bg-danger-secondary: theme("colors.red.700");
   --bg-danger-tertiary: theme("colors.red.800");
-  --bg-danger-pale: rgba(116, 42, 42, 0.5);
+  --bg-danger-pale: rgba(116, 42, 42, 0.75);
 
   // Shadow outline color for component
   --shadow-outline-default: theme("colors.white");
