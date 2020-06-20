@@ -1,25 +1,29 @@
 <template>
-  <div class="card flex flex-row p-5 rounded-lg" :class="bgColor">
+  <div :class="baseClasses">
     <heroicon
       :name="iconName"
       width="40"
       class="fill-current"
-      :class="iconClass"
+      :class="iconClasses"
     />
-    <div>
-      <p class="font-medium leading-6" :class="titleColor">
+    <div class="flex flex-col" :class="textClasses">
+      <span :class="titleClasses">
         {{ title }}
-      </p>
-      <p class="m-0 leading-5 text-sm" :class="bodyColor">
+      </span>
+      <span :class="bodyClasses">
         {{ body }}
-      </p>
+      </span>
     </div>
   </div>
 </template>
 
 <script>
+import AlertTheme from "../themes/default/PAlert";
+
+const { baseClass, titleClass, bodyClass, iconClass } = AlertTheme;
+
 export default {
-  name: "pAlert",
+  name: "PAlert",
   props: {
     type: {
       required: true,
@@ -34,44 +38,65 @@ export default {
       required: true,
       type: String,
     },
+    baseClass: {
+      type: [String, Object, Array],
+      default: baseClass,
+    },
+    titleClass: {
+      type: [String, Object, Array],
+      default: titleClass,
+    },
+    bodyClass: {
+      type: [String, Object, Array],
+      default: bodyClass,
+    },
+    iconClass: {
+      type: [String, Object, Array],
+      default: iconClass,
+    },
   },
   computed: {
-    bgColor() {
-      return "bg-" + this.type + "-50 ";
+    textClasses() {
+      return " text-" + this.type + "-primary flex flex-row ";
     },
-    titleColor() {
+    baseClasses() {
+      let classes = [baseClass];
+      let styleClasses = [this.textClasses, " bg-" + this.type + "-pale"];
+
+      return classes.concat(styleClasses);
+    },
+    titleClasses() {
+      return titleClass;
+    },
+    bodyClasses() {
       if (!!this.body) {
-        return "text-" + this.type + "-700 mb-1";
+        return bodyClass + " mt-1";
       } else {
-        return "text-" + this.type + "-700 m-0";
+        return bodyClass;
       }
-    },
-    bodyColor() {
-      return "text-" + this.type + "-700";
     },
     iconName() {
-      if (this.type == "warning") {
-        return "exclamation";
-      }
-      if (this.type == "success") {
-        return "check-circle";
-      }
-      if (this.type == "danger") {
-        return "x-circle";
-      }
-      if (this.type == "info") {
-        return "information";
+      switch (this.type) {
+        case "success":
+          return "check-circle";
+          break;
+        case "warning":
+          return "exclamation";
+          break;
+        case "danger":
+          return "x-circle";
+          break;
+        default:
+          return "information";
       }
     },
-    iconClass() {
+    iconClasses() {
       if (!!this.body) {
-        return "flex-shrink-0 text-" + this.type + "-500 mr-3 mt-1";
+        return iconClass + " mt-1 mr-3";
       } else {
-        return "flex-shrink-0 text-" + this.type + "-500 mr-2";
+        return iconClass + " mr-1";
       }
     },
   },
 };
 </script>
-
-<style></style>
