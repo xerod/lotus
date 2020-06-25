@@ -18,6 +18,11 @@ module.exports = {
         },
       },
       textColor: {
+        default: {
+          primary: "var(--text-default-primary)",
+          secondary: "var(--text-default-secondary)",
+          tertiary: "var(--text-default-tertiary)",
+        },
         info: {
           primary: "var(--text-info-primary)",
           secondary: "var(--text-info-secondary)",
@@ -40,6 +45,12 @@ module.exports = {
         },
       },
       backgroundColor: {
+        default: {
+          primary: "var(--bg-default-primary)",
+          secondary: "var(--bg-default-secondary)",
+          tertiary: "var(--bg-default-tertiary)",
+          pale: "var(--bg-default-pale)",
+        },
         info: {
           primary: "var(--bg-info-primary)",
           secondary: "var(--bg-info-secondary)",
@@ -66,6 +77,11 @@ module.exports = {
         },
       },
       borderColor: {
+        default: {
+          primary: "var(--border-default-primary)",
+          secondary: "var(--border-default-secondary)",
+          tertiary: "var(--border-default-tertiary)",
+        },
         info: {
           primary: "var(--border-info-primary)",
           secondary: "var(--border-info-secondary)",
@@ -88,6 +104,11 @@ module.exports = {
         },
       },
       placeholderColor: {
+        default: {
+          primary: "var(--placeholder-default-primary)",
+          secondary: "var(--placeholder-default-secondary)",
+          tertiary: "var(--placeholder-default-tertiary)",
+        },
         info: {
           primary: "var(--placeholder-info-primary)",
           secondary: "var(--placeholder-info-secondary)",

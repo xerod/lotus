@@ -135,23 +135,32 @@ export default {
   --color-ui-primary: theme("colors.green.700");
 
   // Text color
+  --text-default-primary: theme("colors.gray.900");
+  --text-default-secondary: theme("colors.gray.600");
+  --text-default-tertiary: theme("colors.gray.400");
+
   --text-info-primary: theme("colors.blue.900");
   --text-info-secondary: theme("colors.blue.600");
-  --text-info-tertiary: theme("colors.blue.300");
+  --text-info-tertiary: theme("colors.blue.400");
 
   --text-success-primary: theme("colors.green.900");
   --text-success-secondary: theme("colors.green.600");
-  --text-success-tertiary: theme("colors.green.300");
+  --text-success-tertiary: theme("colors.green.400");
 
   --text-warning-primary: theme("colors.yellow.900");
   --text-warning-secondary: theme("colors.yellow.600");
-  --text-warning-tertiary: theme("colors.yellow.300");
+  --text-warning-tertiary: theme("colors.yellow.400");
 
   --text-danger-primary: theme("colors.red.900");
   --text-danger-secondary: theme("colors.red.600");
-  --text-danger-tertiary: theme("colors.red.300");
+  --text-danger-tertiary: theme("colors.red.400");
 
   // Background color
+  --bg-default-primary: theme("colors.gray.700");
+  --bg-default-secondary: theme("colors.gray.600");
+  --bg-default-tertiary: theme("colors.gray.500");
+  --bg-default-pale: theme("colors.white");
+
   --bg-info-primary: theme("colors.blue.700");
   --bg-info-secondary: theme("colors.blue.600");
   --bg-info-tertiary: theme("colors.blue.500");
@@ -173,37 +182,45 @@ export default {
   --bg-danger-pale: theme("colors.red.50");
 
   // Border color
-  --border-info-primary: theme("colors.white");
-  --border-info-secondary: theme("colors.white");
-  --border-info-tertiary: theme("colors.white");
+  --border-default-primary: theme("colors.gray.700");
+  --border-default-secondary: theme("colors.gray.500");
+  --border-default-tertiary: theme("colors.gray.300");
 
-  --border-success-primary: theme("colors.white");
-  --border-success-secondary: theme("colors.white");
-  --border-success-tertiary: theme("colors.white");
+  --border-info-primary: theme("colors.blue.700");
+  --border-info-secondary: theme("colors.blue.500");
+  --border-info-tertiary: theme("colors.blue.300");
 
-  --border-warning-primary: theme("colors.white");
-  --border-warning-secondary: theme("colors.white");
-  --border-warning-tertiary: theme("colors.white");
+  --border-success-primary: theme("colors.green.700");
+  --border-success-secondary: theme("colors.green.500");
+  --border-success-tertiary: theme("colors.green.300");
 
-  --border-danger-primary: theme("colors.white");
-  --border-danger-secondary: theme("colors.white");
-  --border-danger-tertiary: theme("colors.white");
+  --border-warning-primary: theme("colors.yellow.700");
+  --border-warning-secondary: theme("colors.yellow.500");
+  --border-warning-tertiary: theme("colors.yellow.300");
+
+  --border-danger-primary: theme("colors.red.700");
+  --border-danger-secondary: theme("colors.red.500");
+  --border-danger-tertiary: theme("colors.red.300");
 
   // Placeholder color
-  --placeholder-info-primary: theme("colors.white");
-  --placeholder-info-secondary: theme("colors.white");
-  --placeholder-info-tertiary: theme("colors.white");
+  --placeholder-default-primary: theme("colors.gray.700");
+  --placeholder-default-secondary: theme("colors.gray.500");
+  --placeholder-default-tertiary: theme("colors.gray.300");
 
-  --placeholder-danger-primary: theme("colors.white");
-  --placeholder-danger-secondary: theme("colors.white");
-  --placeholder-danger-tertiary: theme("colors.white");
+  --placeholder-info-primary: theme("colors.blue.700");
+  --placeholder-info-secondary: theme("colors.blue.500");
+  --placeholder-info-tertiary: theme("colors.blue.300");
+
+  --placeholder-danger-primary: theme("colors.red.700");
+  --placeholder-danger-secondary: theme("colors.red.500");
+  --placeholder-danger-tertiary: theme("colors.red.300");
 
   // Shadow outline color for component
-  --shadow-outline-default: theme("colors.white");
-  --shadow-outline-success: theme("colors.white");
-  --shadow-outline-warning: theme("colors.white");
-  --shadow-outline-danger: theme("colors.white");
-  --shadow-outline-info: theme("colors.white");
+  --shadow-outline-default: theme("boxShadow.outline-gray");
+  --shadow-outline-success: theme("boxShadow.outline-green");
+  --shadow-outline-warning: theme("boxShadow.outline-yellow");
+  --shadow-outline-danger: theme("boxShadow.outline-red");
+  --shadow-outline-info: theme("boxShadow.outline-blue");
 }
 
 html[lights-out] {
@@ -214,24 +231,33 @@ html[lights-out] {
   --color-ui-border: theme("colors.cool-gray.800");
   --color-ui-primary: theme("colors.green.500");
 
-  // Text color
+  // Text color for dark mode
+  --text-default-primary: theme("colors.gray.50");
+  --text-default-secondary: theme("colors.gray.100");
+  --text-default-tertiary: theme("colors.gray.300");
+
   --text-info-primary: theme("colors.blue.50");
-  --text-info-secondary: theme("colors.blue.100");
-  --text-info-tertiary: theme("colors.blue.300");
+  --text-info-secondary: theme("colors.blue.400");
+  --text-info-tertiary: theme("colors.blue.600");
 
   --text-success-primary: theme("colors.green.50");
-  --text-success-secondary: theme("colors.green.100");
-  --text-success-tertiary: theme("colors.green.300");
+  --text-success-secondary: theme("colors.green.400");
+  --text-success-tertiary: theme("colors.green.600");
 
   --text-warning-primary: theme("colors.yellow.50");
-  --text-warning-secondary: theme("colors.yellow.100");
-  --text-warning-tertiary: theme("colors.yellow.300");
+  --text-warning-secondary: theme("colors.yellow.400");
+  --text-warning-tertiary: theme("colors.yellow.600");
 
   --text-danger-primary: theme("colors.red.50");
-  --text-danger-secondary: theme("colors.red.100");
-  --text-danger-tertiary: theme("colors.red.300");
+  --text-danger-secondary: theme("colors.red.400");
+  --text-danger-tertiary: theme("colors.red.600");
 
-  // Background color
+  // Background color for dark mode
+  --bg-default-primary: theme("colors.gray.500");
+  --bg-default-secondary: theme("colors.gray.600");
+  --bg-default-tertiary: theme("colors.gray.700");
+  --bg-default-pale: theme("colors.gray.800");
+
   --bg-info-primary: theme("colors.blue.600");
   --bg-info-secondary: theme("colors.blue.700");
   --bg-info-tertiary: theme("colors.blue.800");
@@ -250,14 +276,49 @@ html[lights-out] {
   --bg-danger-primary: theme("colors.red.600");
   --bg-danger-secondary: theme("colors.red.700");
   --bg-danger-tertiary: theme("colors.red.800");
-  --bg-danger-pale: rgba(116, 42, 42, 0.75);
+  // --bg-danger-pale: rgba(116, 42, 42, 0.75);
+  --bg-danger-pale: rgba(119, 29, 29, 0.75);
 
-  // Shadow outline color for component
-  --shadow-outline-default: theme("colors.white");
-  --shadow-outline-success: theme("colors.white");
-  --shadow-outline-warning: theme("colors.white");
-  --shadow-outline-danger: theme("colors.white");
-  --shadow-outline-info: theme("colors.white");
+  //Border Color for dark mode
+  --border-default-primary: theme("colors.gray.300");
+  --border-default-secondary: theme("colors.gray.500");
+  --border-default-tertiary: theme("colors.transparent");
+
+  --border-info-primary: theme("colors.blue.300");
+  --border-info-secondary: theme("colors.blue.500");
+  --border-info-tertiary: theme("colors.transparent");
+
+  --border-success-primary: theme("colors.green.300");
+  --border-success-secondary: theme("colors.green.500");
+  --border-success-tertiary: theme("colors.transparent");
+
+  --border-warning-primary: theme("colors.yellow.300");
+  --border-warning-secondary: theme("colors.yellow.500");
+  --border-warning-tertiary: theme("colors.transparent");
+
+  --border-danger-primary: theme("colors.red.300");
+  --border-danger-secondary: theme("colors.red.500");
+  --border-danger-tertiary: theme("colors.transparent");
+
+  // Placeholder color for dark mode
+  --placeholder-default-primary: theme("colors.gray.700");
+  --placeholder-default-secondary: theme("colors.gray.500");
+  --placeholder-default-tertiary: theme("colors.gray.300");
+
+  --placeholder-info-primary: theme("colors.blue.700");
+  --placeholder-info-secondary: theme("colors.blue.500");
+  --placeholder-info-tertiary: theme("colors.blue.300");
+
+  --placeholder-danger-primary: theme("colors.red.700");
+  --placeholder-danger-secondary: theme("colors.red.500");
+  --placeholder-danger-tertiary: theme("colors.red.300");
+
+  // Shadow outline color for dark mode component
+  --shadow-outline-default: theme("boxShadow.none");
+  --shadow-outline-success: theme("boxShadow.none");
+  --shadow-outline-warning: theme("boxShadow.none");
+  --shadow-outline-danger: theme("boxShadow.none");
+  --shadow-outline-info: theme("boxShadow.none");
 
   pre[class*="language-"],
   code[class*="language-"] {
