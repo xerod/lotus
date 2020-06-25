@@ -37,7 +37,7 @@ module.exports = {
           },
           {
             title: "Component",
-            items: ["/docs/alerts/", "/docs/avatar/"],
+            items: ["/docs/alerts/", "/docs/avatar/", "/docs/input/"],
           },
         ],
       },

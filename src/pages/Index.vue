@@ -8,7 +8,7 @@
             {{ this.$static.metadata.siteName }}
           </h2>
         </div>
-        <h1 class="text-4xl text-center lg:text-5xl">
+        <h1 class="text-4xl dark:text-orange-500 text-center lg:text-5xl">
           Great Documentation starts here.
         </h1>
         <p class="text-xl font-medium text-center">
